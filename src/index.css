@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.ant-radio-button-wrapper:not(:first-child)::before {
+  display: none !important;
+}
