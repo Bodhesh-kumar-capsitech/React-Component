@@ -54,15 +54,15 @@ const Createteammenber: React.FC<Createteammemberprops> = ({ open, onCancel, onO
             >
                 <div className="container mx-auto w-full max-w-[520px] h-auto flex flex-col max-gap-4 gap-[20px]">
                     <div>
-                        <p className=''>Name</p>
+                        <p>Name<span className="text-[#F5222D]"> *</span></p>
                         <Input placeholder="Enter Lead Name" className='w-[472px] h-[32px] max-w-full max-h-fit' />
                     </div>
                     <div>
-                        <p>ID</p>
+                        <p>ID<span className="text-[#F5222D]"> *</span></p>
                         <Input placeholder="Enter Lead Name" className='w-[472px] h-[32px] max-w-full max-h-fit' />
                     </div>
                     <div>
-                        <p>Designation</p>
+                        <p>Designation<span className="text-[#F5222D]"> *</span></p>
                         <Input placeholder="Enter Lead Name" className='w-[472px] h-[32px] max-w-full max-h-fit' />
                     </div>
                     <div>
