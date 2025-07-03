@@ -5,14 +5,16 @@ import CreateLeadForm from "./CreateLeadForm";
 import type { LeadFormValues } from "./CreateLeadForm";
 import Viewlead from "./Viewlead";
 import Createteammenber from "./Createteammember";
+import Createteam from "./Createteam";
 
 export default function Modalcall() {
-  const [modalType, setModalType] = useState<"ticket" | "lead"| "View" | "Createteammember" |null>(null);
+  const [modalType, setModalType] = useState<"ticket" | "lead"| "View" | "Createteammember" | "Createteam" |null>(null);
 
   const openTicketModal = () => setModalType("ticket");
   const openLeadModal = () => setModalType("lead");
   const openViewModal = () => setModalType("View");
   const openCreateteammemberModal = () => setModalType("Createteammember");
+  const openCreateteamModal = () =>setModalType("Createteam");
 
   const handleClose = () => setModalType(null);
 
@@ -45,6 +47,11 @@ export default function Modalcall() {
       <Button type="primary" onClick={openCreateteammemberModal}>
         Create Teammember
       </Button>
+      <br />
+      <br />
+       <Button type="primary" onClick={openCreateteamModal}>
+        Create Team
+      </Button>
 
       {modalType === "ticket" && (
         <CreateTicketForm
@@ -73,6 +80,12 @@ export default function Modalcall() {
 
       {modalType === "Createteammember" && (
         <Createteammenber open={true}
+        onCancel={handleClose}
+      onOk={() => onOk()} />
+      )}
+
+      {modalType === "Createteam" && (
+        <Createteam open={true}
         onCancel={handleClose}
       onOk={() => onOk()} />
       )}

@@ -2,7 +2,8 @@ import CreateLeadForm, { type LeadFormValues } from "./Component/CreateLeadForm"
 import CreateTicketForm from "./Component/CreateTicketForm";
 import Viewlead from "./Component/Viewlead";
 import Modalcall from "./Component/Modalcall";
-import Createteammenber from "./Component/Createteammember";
+import Createteammember from "./Component/Createteammember";
+import Createteam from "./Component/Createteam";
 
 
 export default function LeadPage() {
@@ -21,7 +22,13 @@ export default function LeadPage() {
       } } onOk={function (_formData?: LeadFormValues): void {
         return;
       } }/>
-      <Createteammenber open={false} onCancel={function (): void {
+      <Createteammember open={false} onCancel={function (): void {
+        return;
+      } } onOk={function (): void {
+        return;
+      } }/>
+
+      <Createteam open={false} onCancel={function (): void {
         return;
       } } onOk={function (): void {
         return;

@@ -11,7 +11,7 @@ const onSearch = (value: string) => {
 };
 
 
-export interface Createteammemberprops {
+export interface Createteam {
     open: boolean;
     onCancel: () => void;
     onOk: (formData?: LeadFormValues) => void;
@@ -19,13 +19,13 @@ export interface Createteammemberprops {
 
 
 
-const Createteam: React.FC<Createteammemberprops> = ({ open, onCancel, onOk }) => {
+const Createteam: React.FC<Createteam> = ({ open, onCancel, onOk }) => {
 
     
     return (
         <>
             <Modal
-                title="Createteammember"
+                title="Createteam"
                 closable={{ 'aria-label': 'Custom Close Button' }}
                 open={open}
                 onOk={() => onOk()}
@@ -72,16 +72,16 @@ const Createteam: React.FC<Createteammemberprops> = ({ open, onCancel, onOk }) =
                             className='w-[472px] h-[32px] max-w-full max-h-fit'
                             options={[
                                 {
-                                    value: 'Team A',
-                                    label: 'Team A',
+                                    value: 'Todo',
+                                    label: 'Todo',
                                 },
                                 {
-                                    value: 'Team B',
-                                    label: 'Team B',
+                                    value: 'On progress',
+                                    label: 'On progress',
                                 },
                                 {
-                                    value: 'Team C',
-                                    label: 'Team C',
+                                    value: 'Completed',
+                                    label: 'Completed',
                                 },
                             ]}
                         />
